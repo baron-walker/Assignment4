@@ -1,0 +1,31 @@
+﻿
+@model  Assignment4.Models.RestResponse
+<head>
+    <title>Make a Resaurant Suggestion!</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <header>
+        <h4 class="bg-primary text-white text-center ">Suggest a new Restaurant</h4>
+    </header>
+
+    <!-- This form is used for adding in new restaurant Info -->
+
+    <form asp-action="AddRest" method="post">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+        <br />
+        <label asp-for="RestName">Restaurant Name</label>
+        <input asp-for="RestName" />
+        <br />
+        <label asp-for="FavDish">Favorite Dish</label>
+        <input asp-for="FavDish" />
+        <br />
+        <label asp-for="RestPhone">Restaurant Phone like "111-222-1234"</label>
+        <input asp-for="RestPhone" />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+    <br />
+</body>

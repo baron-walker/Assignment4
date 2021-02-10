@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Here is a list of the entered suggestions";
+}
+
+@model IEnumerable<Assignment4.Models.RestResponse>
+<!-- create restaurant list table -->
+<div>
+    <p>Entered Restaurants:</p>
+
+    <table class="tab-content table">
+        <tr>
+            <th>Name</th>
+            <th>Restaurant Name</th>
+            <th>Favorite Dish</th>
+            <th>Restaurant Phone Number</th>
+        </tr>
+
+        <!-- loop through each restaurant row -->
+
+        @foreach (Assignment4.Models.RestResponse x in Model)
+        {
+            <tr>
+                <td>@x.Name</td>
+                <td>@x.RestName</td>
+                <td>@x.FavDish</td>
+                <td>@x.RestPhone</td>
+            </tr>
+        }
+    </table>
+</div>
+

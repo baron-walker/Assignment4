@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Top 5 Resturants in Provo";
+}
+@model IEnumerable<string>
+
+<!-- Simple Index page -->
+<body>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <header>
+        <h4 class="bg-primary text-white text-center ">These are the best places to eat in provo</h4>
+
+        <!-- CSS to adjust form and picture to a left and right box -->
+        <style>
+            #leftbox {
+                padding: 25px;
+                float: left;
+                width: 50%;
+                height: 400px;
+            }
+
+
+            #rightbox {
+                padding: 25px;
+                float: right;
+                width: 50%;
+                height: 400px;
+            }
+        </style>
+    </header>
+
+    <!-- List the data from the restaurants model to make a top five list -->
+    <div id="leftbox" class="list-group">
+        <ul>
+            @foreach (string i in Model)
+            {
+            <li class="list-group-item">@i</li>
+            }
+        </ul>
+    </div>
+
+    <!-- Food image to the right of the top 5 list -->
+    <div id="rightbox">
+        <img src="~/img/ranch.jpeg" width="500" class="rounded" />
+    </div>
+</body>

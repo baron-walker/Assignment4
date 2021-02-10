@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top 5 Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<body class="text-center">
+
+    <!-- Simple Nav bar for all pages -->
+    <nav>
+        <br />
+        <a class="col col-2 btn btn-primary" asp-action="Index">Home</a>
+        <a class="col col-2 btn btn-primary" asp-action="AddRest">Add Suggestion</a>
+        <a class="col col-2 btn btn-primary" asp-action="SeeSug">See Suggestions</a>
+        <br />
+        <br />
+    </nav>
+    <div>
+        <h1>@ViewBag.Title</h1>
+    </div>
+    @RenderBody()
+    <footer class="border-top footer text-muted">Brian Walker llc. 2021</footer>
+</body>
+</html>
